@@ -36,7 +36,7 @@ def consulta(input_usuario):
     print("consulta: ", consulta)
     resultado = cadena.invoke(consulta)
     print("resultado: ", resultado)
-    if (resultado)
+    if (resultado):
          return resultado["result"]
     # Imprimir el valor de 'result'
     return result_value
