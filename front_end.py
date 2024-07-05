@@ -1,5 +1,3 @@
-# lanzar con streamlit run front_end.py en el terminal
-
 import backend
 import streamlit as st
 from streamlit_chat import message
@@ -15,8 +13,7 @@ if "respuestas" not in st.session_state:
 
 def click():
     if st.session_state.user != "":
-        pregunta = st.session_state.user
-       
+        pregunta = st.session_state.user       
         respuesta = backend.consulta(pregunta)
 
         st.session_state.preguntas.append(pregunta)
