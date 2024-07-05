@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain_community.utilities import sql_database
 db = sql_database.SQLDatabase.from_uri("sqlite:///mdv.db")
-import env_vars
 import os
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
