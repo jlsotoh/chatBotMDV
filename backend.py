@@ -3,7 +3,7 @@ db = sql_database.SQLDatabase.from_uri("sqlite:///mdv.db")
 import env_vars
 import os
 
-os.environ["OPENAI_API_KEY"] = env_vars.OPENAI_API_KEY
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 from langchain_experimental.sql import SQLDatabaseChain
