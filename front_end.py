@@ -1,7 +1,17 @@
-import backend
+# import backend
 import streamlit as st
 from streamlit_chat import message
 
+st.set_page_config(
+    page_title="Chatbot MDV",
+    page_icon="🧊",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get Help": "https://www.extremelycoolapp.com/help",
+        "Report a bug": "https://www.extremelycoolapp.com/bug",
+        "About": "# This is a header. This is an *extremely* cool app!",
+    },
+)
 st.markdown(
     """
  <header style='padding:20px 0;background-color: #072146;color: #fff;'> <div style='width: 600px; margin: 0 auto;'><img src='https://ideeo.mx/bbva/chatbot/img/logoBBVA.png' style='width: 120px;'></div></header>
