@@ -12,16 +12,43 @@ st.set_page_config(
         "About": "# This is a header. This is an *extremely* cool app!",
     },
 )
-st.markdown(
-    """
- <header style='padding:20px 0;background-color: #072146;color: #fff;'> <div style='width: 600px; margin: 0 auto;'><img src='https://ideeo.mx/bbva/chatbot/img/logoBBVA.png' style='width: 120px;'></div></header>
-""",
-    unsafe_allow_html=True,
-)
 
 st.html(
     "<div style='display: flex; justify-content: space-between;'><div><h1>Chat Modelo de Ventas</h1><span>Puedes realizarme preguntas relacionadas a los materiales existentes</span></div><div><img width='130' src='https://ideeo.mx/bbva/chatbot/img/chat.png'></div></div>"
 )
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;} 
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+page_header_config = """
+    <style>
+    [data-testid="stHeader"]{  
+        background-color: #072146;
+        color: #fff; 
+        height:60px;
+        width: 100%;
+    }
+
+    [data-testid="stDecoration"]{
+        position: fixed;
+        background-image: url(https://ideeo.mx/bbva/chatbot/img/logoBBVA.png);
+        width: 100px;
+        z-index: 999990;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 18px;
+        left: calc(30% - 50px);
+    }
+    
+    </style>
+"""
+st.markdown(page_header_config, unsafe_allow_html=True)
 
 if "preguntas" not in st.session_state:
     st.session_state.preguntas = []
