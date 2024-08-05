@@ -25,8 +25,8 @@ Dada una pregunta del usuario:
 def consulta(input_usuario):
     consulta = formato.format(question=input_usuario)
     print("consulta: ", consulta)
-    # resultado = cadena.invoke(consulta)
-    # print("resultado: ", resultado)
+    resultado = cadena.invoke(consulta)
+    print("resultado: ", resultado)
     if resultado:
         return resultado["result"]
     # Imprimir el valor de 'result'
